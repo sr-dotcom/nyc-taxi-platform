@@ -8,7 +8,7 @@ Raw files come from the [NYC TLC Trip Record Data](https://www.nyc.gov/site/tlc/
 
 ## Profile the trip file
 
-Set up once:
+Set up once (Windows PowerShell):
 
     python -m venv .venv
     .venv\Scripts\Activate.ps1
@@ -18,6 +18,6 @@ Run:
 
     python scripts/profile_trips.py data/raw/yellow_tripdata_2026-09.parquet
 
-Save the output to `docs/profile.md`:
+Save the output to docs/profile.md (Windows PowerShell):
 
     python scripts/profile_trips.py data/raw/yellow_tripdata_2026-09.parquet | Out-File -Encoding utf8 docs/profile.md
