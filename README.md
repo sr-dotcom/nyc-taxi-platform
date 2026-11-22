@@ -21,3 +21,11 @@ Run:
 Save the output to docs/profile.md (Windows PowerShell):
 
     python scripts/profile_trips.py data/raw/yellow_tripdata_2026-09.parquet | Out-File -Encoding utf8 docs/profile.md
+
+## Find data quality issues
+
+Run after the setup above:
+
+    python scripts/find_issues.py data/raw/yellow_tripdata_2026-09.parquet
+
+This prints the count of suspicious rows for each rule and one example row for each main finding. The results are described in [docs/findings.md](docs/findings.md).

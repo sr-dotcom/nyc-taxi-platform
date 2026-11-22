@@ -81,3 +81,9 @@ Not in the data dictionary, so no code meanings are available. The values in thi
 - **In the file, not in the dictionary:** `request_source`.
 - **In the dictionary, not in the file:** none.
 - **Name differs:** the file uses `Airport_fee`. The dictionary uses `airport_fee`.
+
+## Observations
+
+- Five columns are empty on the same 1,190,413 rows: `passenger_count`, `RatecodeID`, `store_and_fwd_flag`, `congestion_surcharge` and `Airport_fee`. All of these rows have `payment_type = 0` (Flex Fare), and all Flex Fare rows are in this group. **Guess:** Flex Fare trips do not fill in these fields. The data dictionary does not say this.
+- `request_source` is filled on 1,190,092 rows. All of them are Flex Fare trips. 321 Flex Fare trips have no `request_source`. **Guess:** the column records how a Flex Fare trip was requested. The data dictionary does not describe it.
+- Every code value in this file appears in the data dictionary. Code 6 for `RatecodeID` and `payment_type` is in the dictionary but not in this file.
