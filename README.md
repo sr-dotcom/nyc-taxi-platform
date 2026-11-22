@@ -29,3 +29,11 @@ Run after the setup above:
     python scripts/find_issues.py data/raw/yellow_tripdata_2026-09.parquet
 
 This prints the count of suspicious rows for each rule and one example row for each main finding. The results are described in [docs/findings.md](docs/findings.md).
+
+## Reproduce the numbers in the docs
+
+Run after the setup above:
+
+    python scripts/investigate.py data/raw/yellow_tripdata_2026-09.parquet
+
+This prints every supporting number quoted in [docs/findings.md](docs/findings.md) and in the Observations section of [docs/columns.md](docs/columns.md), each with a label. Running it twice gives the same output. The file `taxi_zone_lookup.csv` must be in the same folder as the Parquet file.

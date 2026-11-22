@@ -9,7 +9,7 @@ This document only reports. No row was changed or deleted.
 - **Rule:** `fare_amount` is below 0.
 - **Rows:** 14,190 (0.366% of the file).
 - **Example:** VendorID 2, pickup 2026-09-01 00:06:56, distance 8.41 miles, `fare_amount` -35.2, `total_amount` -40.95, `payment_type` 2 (Cash). The fee columns are negative too.
-- **Best guess at the cause:** these rows are refunds or reversed fares. 8,671 of the 14,190 rows (61%) have `payment_type` 4 (Dispute). The data does not confirm this.
+- **Best guess at the cause:** these rows are refunds or reversed fares. 8,671 of the 14,190 rows (61.1%) have `payment_type` 4 (Dispute). The data does not confirm this.
 
 ## 2. Pickup outside the file's month
 
